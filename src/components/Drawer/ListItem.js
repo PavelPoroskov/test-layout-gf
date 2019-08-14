@@ -7,6 +7,13 @@ const useStyles = makeStyles(theme => ({
   root: {
     color: "#ffffff",
     paddingLeft: '21px',
+    paddingTop: '10px',
+    paddingBottom: '10px',
+    marginTop: 3,
+    '&:nth-of-type(1)': {
+      marginTop: 0,
+    },
+    minHeight: 56,
     '&:hover': {
       backgroundColor: "rgba(255,255,255,0.102)",
     },
@@ -17,9 +24,19 @@ const useStyles = makeStyles(theme => ({
     },
     '& .MuiListItemIcon-root': {
       color: "rgba(255,255,255,0.323)",
+      minWidth: 'unset',
+      paddingRight: 12,
     },
     '&.Mui-selected .MuiListItemIcon-root, &.Mui-selected:hover .MuiListItemIcon-root': {
       color: "rgba(255,255,255,1)",
+    },
+    // '& .MuiListItemText-primary': {
+    '& .MuiListItemText-primary': {
+        fontSize: '10px',
+      // letterSpacing: '0.02em',
+      // fontWeight: 'bold',
+      // lineHeight: 'normal',
+      lineHeight: '60%',
     }
   }
 }));

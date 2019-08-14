@@ -45,13 +45,16 @@ const useStyles = makeStyles(theme => ({
     zIndex: theme.zIndex.drawer,
     backgroundColor: "#ffffff",
     color: "#167ade",
-    displey: "flex"
+    "&.MuiPaper-elevation4": {
+      boxShadow: "unset"
+    }
   },
   toolbar: theme.mixins.toolbar,
   breadcrumbs: {
     paddingTop: "20px",
     paddingBottom: "20px",
-    fontSize: "11px"
+    fontSize: "11px",
+    color: "#656565"
   },
   contentContainer: {
     flexGrow: 1,
@@ -61,8 +64,11 @@ const useStyles = makeStyles(theme => ({
     //zIndex: theme.zIndex.drawer-1,
   },
   content: {
-    paddingTop: "10px"
-  }
+    paddingTop: "10px",
+  },
+  contentCenter: {
+    backgroundColor: "pink"
+  },
 }));
 
 function ResponsiveDrawer(props) {
@@ -103,10 +109,10 @@ function ResponsiveDrawer(props) {
           <div className={classes.toolbar} />
           <div className={classes.content}>
             <Breadcrumbs className={classes.breadcrumbs}>
-              <Typography color="textPrimary">Главная</Typography>
-              <Typography color="textPrimary">Поиск</Typography>
+              <Typography color="rgba(90,90,90,0.68)">Главная</Typography>
+              <Typography color="rgba(90,90,90,0.68)">Поиск</Typography>
             </Breadcrumbs>
-            qw12
+            <div className={classes.contentCenter}>qw12</div>
           </div>
         </main>
       </div>

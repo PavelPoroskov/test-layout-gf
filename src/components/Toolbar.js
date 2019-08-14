@@ -2,19 +2,23 @@ import React from 'react';
 
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import SearchIcon from "@material-ui/icons/Search";
-import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import ExitToAppIcon from "@material-ui/icons/ExitToAppOutlined";
 import Toolbar from "@material-ui/core/Toolbar";
-import Box from "@material-ui/core/Box";
+// import Box from "@material-ui/core/Box";
 import { makeStyles } from '@material-ui/core/styles';
+
+import SearchInput from "./SearchInput";
 
 const useStyles = makeStyles(theme => ({
   menuButton: {
-    marginRight: theme.spacing(2),
+    // marginRight: theme.spacing(2),
     [theme.breakpoints.up("sm")]: {
       display: "none"
     }
     // color: "#167ade",
+  },
+  iconSize20: {
+    fontSize: 26.6,
   },
 }));
 
@@ -22,9 +26,10 @@ const useStyles = makeStyles(theme => ({
 function CustomisedToolbar({toggleDrawer, ...props}) {
   const classes = useStyles(props);
   
+  // <SearchIcon className={classes.iconSize}/>
   return (
     <Toolbar>
-    <Box display="flex" style={{ width: "100%" }}>
+    {/* <Box display="flex" style={{ width: "100%", alignItems: 'center'}}> */}
       <IconButton
         color="inherit"
         aria-label="open drawer"
@@ -32,29 +37,17 @@ function CustomisedToolbar({toggleDrawer, ...props}) {
         onClick={toggleDrawer}
         className={classes.menuButton}
       >
-        <MenuIcon />
+        <MenuIcon/>
       </IconButton>
-      <Box flexGrow={1}>
-        <IconButton
-          color="inherit"
-          // aria-label="open drawer"
-          // edge="start"
-          // onClick={handleDrawerToggle}
-          // className={classes.menuButton}
-        >
-          <SearchIcon />
-        </IconButton>
-      </Box>
+      {/* <Box flexGrow={1}> */}
+        <SearchInput />
+      {/* </Box> */}
       <IconButton
         color="inherit"
-        // aria-label="open drawer"
-        // edge="start"
-        // onClick={handleDrawerToggle}
-        // className={classes.menuButton}
       >
-        <ExitToAppIcon />
+        <ExitToAppIcon className={classes.iconSize20}/>
       </IconButton>
-    </Box>
+    {/* </Box> */}
   </Toolbar>
 );
 }
