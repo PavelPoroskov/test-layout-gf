@@ -63,21 +63,21 @@ function CustomisedDrawer(props) {
           <ListItem button key={1}
           >
             <ListItemIcon>
-              <InboxIcon className={classes.iconSize16}/>
+              <InboxIcon className={classes.iconSize16} viewBox="1 1 23 23"/>
             </ListItemIcon>
             <ListItemText primary={'ГЛАВНАЯ'} />
           </ListItem>
           <ListItem button key={2}
           >
             <ListItemIcon>
-              <MailIcon className={classes.iconSize16}/>
+              <MailIcon className={classes.iconSize16} viewBox="1 1 23 23"/>
             </ListItemIcon>
             <ListItemText primary={'ПУНКТ МЕНЮ'} />
           </ListItem>
           <ListItem button key={3}
           >
             <ListItemIcon>
-              <InboxIcon className={classes.iconSize16}/>
+              <InboxIcon className={classes.iconSize16} viewBox="1 1 23 23"/>
             </ListItemIcon>
             <ListItemText primary={'ПУНКТ МЕНЮ В ДВЕ СТРОКИ'} />
           </ListItem>
@@ -85,7 +85,7 @@ function CustomisedDrawer(props) {
             selected={true}
           >
             <ListItemIcon>
-              <MailIcon className={classes.iconSize16}/>
+              <MailIcon className={classes.iconSize16} viewBox="1 1 23 23"/>
             </ListItemIcon>
             <ListItemText primary={'ПУНКТ МЕНЮ'} />
           </ListItem>

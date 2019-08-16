@@ -6,10 +6,18 @@ import IconButton from "@material-ui/core/IconButton";
 import OutlinedInput from "@material-ui/core/OutlinedInput";
 //import OutlinedInput from "@material-ui/core/Input";
 //import OutlinedInput from "@material-ui/core/InputBase";
+import clsx from 'clsx'
 
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    alignItems: 'center',
+    marginLeft: 'auto',
+  },
+  rootOpened: {
+    width: "100%",
+  },
   iconSize16: {
     fontSize: 22,
   },
@@ -39,9 +47,10 @@ function SearchInput({ children, ...props }) {
   function toggleShowInput() {
     setShowInput(!showInput);
   }
+  const classesRoot = showInput ? clsx(classes.root, classes.rootOpened) : classes.root
 
   return (
-    <Box display="flex" style={{ width: "100%", alignItems: 'center'}}>
+    <Box display="flex" className={classesRoot}>
       <IconButton color="inherit" onClick={toggleShowInput}>
         <SearchIcon className={classes.iconSize16} />
       </IconButton>

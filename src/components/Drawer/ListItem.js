@@ -9,11 +9,11 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: '21px',
     paddingTop: '10px',
     paddingBottom: '10px',
-    marginTop: 3,
+    marginTop: 1,
     '&:nth-of-type(1)': {
       marginTop: 0,
     },
-    minHeight: 56,
+    minHeight: 58,
     '&:hover': {
       backgroundColor: "rgba(255,255,255,0.102)",
     },
